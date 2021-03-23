@@ -1,2 +1,3 @@
-# altwalker
+# altwalker-action 
+
 GitHub Action for AltWalker.
