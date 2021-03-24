@@ -1,5 +1,5 @@
 name: 'AltWalker Action'
-description: 'AltWalker Action - '
+description: 'This action installs AltWalker.'
 runs:
   using: "composite"
   steps:
