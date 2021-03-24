@@ -13,7 +13,7 @@ jobs:
   altwalker-action:
 
     runs-on: ubuntu-latest
-    name: A test job for altwalker-action@v1.0.0
+    name: A example job for altwalker-action@v1.1.0
 
     steps:
     - uses: actions/checkout@v2
@@ -25,7 +25,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - uses: Robert-96/altwalker-action@v1.0.0
+    - uses: Robert-96/altwalker-action@v1.1.0
     - run: gw --version
       shell: bash
     - run: altwalker --version
