@@ -13,6 +13,6 @@ echo '#!/bin/bash' > ~/.graphwalker/graphwalker-cli.sh
 echo 'java -jar ~/.graphwalker/graphwalker-cli-'$GRAPHWALKER_VERSION'.jar "$@"' >> ~/.graphwalker/graphwalker-cli.sh
 
 chmod +x ~/.graphwalker/graphwalker-cli.sh
-ln -s ~/.graphwalker/graphwalker-cli.sh /usr/local/bin/gw
+sudo ln -s ~/.graphwalker/graphwalker-cli.sh /usr/local/bin/gw
 
 echo "GraphWalker is installed."
