@@ -13,7 +13,7 @@ jobs:
   altwalker-action:
 
     runs-on: ubuntu-latest
-    name: A example job for altwalker-action@v1.1.0
+    name: A example job for altwalker-action@v1
 
     steps:
     - uses: actions/checkout@v2
