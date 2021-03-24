@@ -1,5 +1,8 @@
 name: 'AltWalker Action'
 description: 'This action installs AltWalker.'
+branding:
+  icon: 'check'
+  color: 'blue'
 runs:
   using: "composite"
   steps:
