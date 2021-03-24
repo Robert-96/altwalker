@@ -1,0 +1,9 @@
+name: 'AltWalker Action'
+description: 'AltWalker Action - '
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/install_graphwalker.sh
+      shell: bash
+    - run: ${{ github.action_path }}/install_altwalker.sh
+      shell: bash
