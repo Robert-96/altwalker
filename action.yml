@@ -1,22 +1,22 @@
-name: 'Setup AltWalker'
-description: 'Set up AltWalker and the GraphWalker command-line tools.'
+name: "Setup AltWalker"
+description: "Set up AltWalker and the GraphWalker command-line tools."
 branding:
-  icon: 'git-pull-request'
-  color: 'green'
+  icon: "git-pull-request"
+  color: "green"
 inputs:
   altwalker-version:
-    description: 'The version of a AltWalker to use, using SemVer's version syntax.'
-    default: '0.3.0'
+    description: "The version of a AltWalker to use, using SemVer's version syntax."
+    default: "0.3.0"
   graphwalker-version:
-    description: 'The version of a GraphWalker to use, using SemVer's version syntax.'
-    default: '4.3.1'
+    description: "The version of a GraphWalker to use, using SemVer's version syntax."
+    default: "4.3.1"
   python-version:
-    description: 'The version range or exact version of a Python version to use, using SemVer's version range syntax.'
-    default: '3.9'
+    description: "The version range or exact version of a Python version to use, using SemVer's version range syntax."
+    default: "3.9"
   java-version:
-    description: 'The Java version to make available on the path. Takes a whole or SemVer Java version, or 1.x syntax (e.g. 1.8 => Java 8.x).'
+    description: "The Java version to make available on the path. Takes a whole or SemVer Java version, or 1.x syntax (e.g. 1.8 => Java 8.x)."
     required: true
-    default: '11'
+    default: "11"
 runs:
   using: "composite"
   steps:
