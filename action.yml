@@ -1,12 +1,36 @@
-name: 'AltWalker Action'
-description: 'This action installs AltWalker.'
+name: 'Setup AltWalker'
+description: 'Set up AltWalker and the GraphWalker command-line tools.'
 branding:
-  icon: 'check'
-  color: 'blue'
+  icon: 'git-pull-request'
+  color: 'green'
+inputs:
+  altwalker-version:
+    description: 'The version of a AltWalker to use, using SemVer's version syntax.'
+    default: '0.3.0'
+  graphwalker-version:
+    description: 'The version of a GraphWalker to use, using SemVer's version syntax.'
+    default: '4.3.1'
+  python-version:
+    description: 'The version range or exact version of a Python version to use, using SemVer's version range syntax.'
+    default: '3.9'
+  java-version:
+    description: 'The Java version to make available on the path. Takes a whole or SemVer Java version, or 1.x syntax (e.g. 1.8 => Java 8.x).'
+    required: true
+    default: '11'
 runs:
   using: "composite"
   steps:
-    - run: ${{ github.action_path }}/install_graphwalker.sh
+    - name: Set up Python ${{ inputs.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ inputs.python-version }}
+    - name: Set up Java ${{ inputs.java-version }}
+      uses: actions/setup-java@v1
+        with:
+          java-version: ${{ inputs.java-version }}
+    - name: Set up GraphWalker ${{ inputs.graphwalker-version }}
+      run: ${{ github.action_path }}/install_graphwalker.sh ${{ inputs.graphwalker-version }}
       shell: bash
-    - run: ${{ github.action_path }}/install_altwalker.sh
+    - name: Set up AltWalker ${{ inputs.altwalker-version }}
+      run: ${{ github.action_path }}/install_altwalker.sh ${{ inputs.altwalker-version }}
       shell: bash

@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-GRAPHWALKER_VERSION="4.3.1"
+GRAPHWALKER_VERSION=$1
 
 echo "Downloading GraphWalker $GRAPHWALKER_VERSION..."
 wget "https://github.com/GraphWalker/graphwalker-project/releases/download/$GRAPHWALKER_VERSION/graphwalker-cli-$GRAPHWALKER_VERSION.jar"
