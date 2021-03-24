@@ -17,19 +17,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
-    - name: Set up JDK 11
-      uses: actions/setup-java@v1
-      with:
-        java-version: 11
-    - uses: Robert-96/altwalker-action@v1.1.0
+    - name: Setup AltWalker
+      uses: Robert-96/altwalker-action@v1
     - run: gw --version
       shell: bash
     - run: altwalker --version
       shell: bash
+
 ```
 
 ## License
