@@ -20,7 +20,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - uses: Robert-96/altwalker-action@v1
+    - uses: Robert-96/altwalker-action@v1.0.0
     - run: gw --version
       shell: bash
     - run: altwalker --version
