@@ -6,6 +6,10 @@ AltWalker is an open source Model-Based Testing framework that supports running 
 
 ## Usage
 
+See [action.yml](https://github.com/Robert-96/altwalker-action/blob/main/action.yml).
+
+### Basic
+
 ```yml
 on: [push]
 
@@ -25,11 +29,110 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
-    - uses: Robert-96/altwalker-action@v1
+    - name: Set up AltWalker
+      uses: Robert-96/altwalker-action@v1
     - run: gw --version
       shell: bash
     - run: altwalker --version
       shell: bash
+```
+
+### Specify AltWalker Version
+
+```yml
+on: [push]
+
+jobs:
+  altwalker-action:
+
+    runs-on: ubuntu-latest
+    name: A example job for altwalker-action@v1
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    - name: Set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+    - name: Set up AltWalker
+      uses: Robert-96/altwalker-action@v1
+      with:
+        altwalker-version: '0.3.0'
+    - run: gw --version
+      shell: bash
+    - run: altwalker --version
+      shell: bash
+```
+
+### Specify GraphWalker Version
+
+```yml
+on: [push]
+
+jobs:
+  altwalker-action:
+
+    runs-on: ubuntu-latest
+    name: A example job for altwalker-action@v1
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    - name: Set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+    - name: Set up AltWalker
+      uses: Robert-96/altwalker-action@v1
+      with:
+        graphwalker-version: '4.3.1'
+    - run: gw --version
+      shell: bash
+    - run: altwalker --version
+      shell: bash
+```
+
+### Setup .Net/C#
+
+```yml
+on: [push]
+
+jobs:
+  altwalker-action:
+
+    runs-on: ubuntu-latest
+    name: A example job for altwalker-action@v1
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+    - name: Setup .NET 3.0
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '3.0'
+    - name: Set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+    - name: Set up AltWalker
+      uses: Robert-96/altwalker-action@v1
+      with:
+        graphwalker-version: '4.3.1'
+    - run: gw --version
+      shell: bash
+    - run: altwalker --version
+      shell: bash
+
 ```
 
 ## License
