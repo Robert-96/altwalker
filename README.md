@@ -99,7 +99,7 @@ jobs:
       shell: bash
 ```
 
-### Setup .Net/C#
+### Setup .NET
 
 ```yml
 on: [push]
@@ -116,10 +116,10 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.9'
-    - name: Setup .NET 3.0
+    - name: Setup .NET 2.1
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '3.0'
+        dotnet-version: '2.1'
     - name: Set up JDK 11
       uses: actions/setup-java@v1
       with:
