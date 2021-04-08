@@ -28,6 +28,7 @@ jobs:
     - name: Set up JDK 11
       uses: actions/setup-java@v2
       with:
+        distribution: 'zulu'
         java-version: 11
     - name: Set up AltWalker
       uses: Robert-96/altwalker-action@v2
@@ -63,6 +64,7 @@ jobs:
     - name: Set up JDK 11
       uses: actions/setup-java@v2
       with:
+        distribution: 'zulu'
         java-version: 11
     - name: Set up AltWalker
       uses: Robert-96/altwalker-action@v2
@@ -132,6 +134,7 @@ jobs:
     - name: Set up JDK 11
       uses: actions/setup-java@v2
       with:
+        distribution: 'zulu'
         java-version: 11
     - name: Set up AltWalker
       uses: Robert-96/altwalker-action@v2
