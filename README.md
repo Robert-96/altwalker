@@ -17,7 +17,7 @@ jobs:
   altwalker-action:
 
     runs-on: ubuntu-latest
-    name: A example job for altwalker-action@v1
+    name: A example job for altwalker-action@v2
 
     steps:
     - uses: actions/checkout@v2
@@ -26,11 +26,11 @@ jobs:
       with:
         python-version: '3.9'
     - name: Set up JDK 11
-      uses: actions/setup-java@v1
+      uses: actions/setup-java@v2
       with:
         java-version: 11
     - name: Set up AltWalker
-      uses: Robert-96/altwalker-action@v1
+      uses: Robert-96/altwalker-action@v2
     - run: gw --version
       shell: bash
     - run: altwalker --version
@@ -52,7 +52,7 @@ jobs:
   altwalker-action:
 
     runs-on: ubuntu-latest
-    name: A example job for altwalker-action@v1
+    name: A example job for altwalker-action@v2
 
     steps:
     - uses: actions/checkout@v2
@@ -61,11 +61,11 @@ jobs:
       with:
         python-version: '3.9'
     - name: Set up JDK 11
-      uses: actions/setup-java@v1
+      uses: actions/setup-java@v2
       with:
         java-version: 11
     - name: Set up AltWalker
-      uses: Robert-96/altwalker-action@v1
+      uses: Robert-96/altwalker-action@v2
       with:
         altwalker-version: '0.3.0' # The version of a AltWalker to use, using SemVer's version syntax.
     - run: gw --version
@@ -86,7 +86,7 @@ jobs:
   altwalker-action:
 
     runs-on: ubuntu-latest
-    name: A example job for altwalker-action@v1
+    name: A example job for altwalker-action@v2
 
     steps:
     - uses: actions/checkout@v2
@@ -95,11 +95,11 @@ jobs:
       with:
         python-version: '3.9'
     - name: Set up JDK 11
-      uses: actions/setup-java@v1
+      uses: actions/setup-java@v2
       with:
         java-version: 11
     - name: Set up AltWalker
-      uses: Robert-96/altwalker-action@v1
+      uses: Robert-96/altwalker-action@v2
       with:
         graphwalker-version: '4.3.1' # The version of a GraphWalker to use, using SemVer's version syntax.
     - run: gw --version
@@ -117,7 +117,7 @@ jobs:
   altwalker-action:
 
     runs-on: ubuntu-latest
-    name: A example job for altwalker-action@v1
+    name: A example job for altwalker-action@v2
 
     steps:
     - uses: actions/checkout@v2
@@ -130,11 +130,11 @@ jobs:
       with:
         dotnet-version: '2.1'
     - name: Set up JDK 11
-      uses: actions/setup-java@v1
+      uses: actions/setup-java@v2
       with:
         java-version: 11
     - name: Set up AltWalker
-      uses: Robert-96/altwalker-action@v1
+      uses: Robert-96/altwalker-action@v2
     - run: gw --version
       shell: bash
     - run: altwalker --version
