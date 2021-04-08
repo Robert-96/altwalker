@@ -39,6 +39,12 @@ jobs:
 
 ### Specify AltWalker Version
 
+The `altwalker-version` input supports an version using [SemVer](https://semver.org/) notation:
+
+* major versions: `0.2`, `0.3`
+* more specific versions: `0.3.0`, `0.2.7`, `0.2.6`
+
+
 ```yml
 on: [push]
 
@@ -61,7 +67,7 @@ jobs:
     - name: Set up AltWalker
       uses: Robert-96/altwalker-action@v1
       with:
-        altwalker-version: '0.3.0'
+        altwalker-version: '0.3.0' # The version of a AltWalker to use, using SemVer's version syntax.
     - run: gw --version
       shell: bash
     - run: altwalker --version
@@ -70,6 +76,9 @@ jobs:
 
 ### Specify GraphWalker Version
 
+The `altwalker-version` input supports only an exact version using [SemVer](https://semver.org/) notation (e.g. `4.3.0`, `4.3.1`, `4.2.0`).
+
+
 ```yml
 on: [push]
 
@@ -92,7 +101,7 @@ jobs:
     - name: Set up AltWalker
       uses: Robert-96/altwalker-action@v1
       with:
-        graphwalker-version: '4.3.1'
+        graphwalker-version: '4.3.1' # The version of a GraphWalker to use, using SemVer's version syntax.
     - run: gw --version
       shell: bash
     - run: altwalker --version
@@ -126,8 +135,6 @@ jobs:
         java-version: 11
     - name: Set up AltWalker
       uses: Robert-96/altwalker-action@v1
-      with:
-        graphwalker-version: '4.3.1'
     - run: gw --version
       shell: bash
     - run: altwalker --version
