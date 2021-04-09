@@ -78,7 +78,7 @@ jobs:
 
 ### Specify GraphWalker Version
 
-The `altwalker-version` input supports only an exact version using [SemVer](https://semver.org/) notation (e.g. `4.3.0`, `4.3.1`, `4.2.0`).
+The `graphwalker-version` input supports only an exact version using [SemVer](https://semver.org/) notation (e.g. `4.3.0`, `4.3.1`, `4.2.0`).
 
 
 ```yml
