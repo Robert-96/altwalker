@@ -1,6 +1,7 @@
 # altwalker-action
 
-> **Warning**: This action is deprecated use https://github.com/altwalker/setup-altwalker insted. 
+> **Warning**: 
+> **This action is deprecated and should no longer be used. Please, migrate your workflows to the [altwalker/setup-altwalker](https://github.com/altwalker/setup-altwalker), which is being actively maintained.** 
 
 Set up [AltWalker](https://altom.gitlab.io/altwalker/altwalker/) and the [GraphWalker](https://graphwalker.github.io/) command-line tools.
 
