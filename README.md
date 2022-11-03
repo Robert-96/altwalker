@@ -1,5 +1,7 @@
 # altwalker-action
 
+> **Warning**: This action is deprecated use https://github.com/altwalker/setup-altwalker insted. 
+
 Set up [AltWalker](https://altom.gitlab.io/altwalker/altwalker/) and the [GraphWalker](https://graphwalker.github.io/) command-line tools.
 
 AltWalker is an open source Model-Based Testing framework that supports running tests written in python3 and .NET/C#. You design your tests as a directed graph and AltWalker generates test cases from your graph (using GraphWalker) and executes them.
